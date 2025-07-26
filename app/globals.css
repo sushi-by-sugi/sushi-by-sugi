@@ -23,3 +23,8 @@ body {
   font-family: Cormorant Garamond, sans-serif;
   overflow: hidden;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}

@@ -7,9 +7,15 @@ interface ImageSectionProps {
   src: string;
   alt: string;
   text: string;
+  link: string;
 }
 
-export default function ImageSection({ src, alt, text }: ImageSectionProps) {
+export default function ImageSection({
+  src,
+  alt,
+  text,
+  link,
+}: ImageSectionProps) {
   return (
     <div className={`flex-1 relative`}>
       <Image src={src} alt={alt} fill className="object-cover rounded-2xl" />
@@ -21,9 +27,9 @@ export default function ImageSection({ src, alt, text }: ImageSectionProps) {
         {text}{" "}
         <Link
           className={
-            "border-2 border-gray-500 rounded-full p-1 w-8 h-8 flex items-center justify-center hover:bg-white hover:border-transparent transition-all duration-300 group"
+            "border-2 border-gray-400/50 rounded-full p-1 w-8 h-8 flex items-center justify-center hover:bg-white hover:border-transparent transition-all duration-300 group"
           }
-          href="/"
+          href={link}
         >
           <GoArrowRight className="h-5 w-5 text-white group-hover:text-black transition-colors duration-300" />
         </Link>

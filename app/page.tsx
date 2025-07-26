@@ -20,15 +20,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/20" />
 
         <Navbar />
+        <Logo />
 
         <div className="absolute bottom-6 left-6 z-10">
           <ul className={"flex gap-4"}>
-            <li className="border-2 border-gray-400 rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-white hover:border-transparent transition-all duration-300 group">
+            <li className="border-2 border-gray-400/50 rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-white hover:border-transparent transition-all duration-300 group">
               <Link href="/">
                 <FaInstagram className="h-5 w-5 text-white group-hover:text-black transition-colors duration-300" />
               </Link>
             </li>
-            <li className="border-2 border-gray-400 rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-white hover:border-transparent transition-all duration-300 group">
+            <li className="border-2 border-gray-400/50 rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-white hover:border-transparent transition-all duration-300 group">
               <Link href="/">
                 <FaTiktok className="h-4 w-4 text-white group-hover:text-black transition-colors duration-300" />
               </Link>
@@ -42,16 +43,19 @@ export default function Home() {
           text={"Private dining"}
           src="/images/Subtract.png"
           alt="Private dining"
+          link={"/services/private-dining"}
         />
         <ImageSection
           text={"Sushi Workshops"}
           src="/images/Subtract-2.png"
           alt="Sushi Workshops"
+          link={"/services/private-dining"}
         />
         <ImageSection
           text={"Catering"}
           src="/images/Subtract-3.png"
           alt="Sushi Workshops"
+          link={"/services/private-dining"}
         />
       </div>
     </div>
