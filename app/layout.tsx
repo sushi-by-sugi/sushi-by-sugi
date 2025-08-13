@@ -9,7 +9,8 @@ const cormorantGaramond = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: "Sushi by Sugi",
-  description: "Ontdek de ultieme sushi catering ervaring met dagverse ingrediënten. Van intieme diners tot grote feesten, wij zorgen voor een culinair hoogtepunt.",
+  description:
+    "Ontdek de ultieme sushi catering ervaring met dagverse ingrediënten. Van intieme diners tot grote feesten, wij zorgen voor een culinair hoogtepunt.",
 };
 
 export default function RootLayout({
@@ -18,10 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${cormorantGaramond.variable} antialiased`}
-      >
+    <html lang="nl">
+      <body className={`${cormorantGaramond.variable} antialiased`}>
         {children}
       </body>
     </html>

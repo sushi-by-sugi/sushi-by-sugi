@@ -5,11 +5,10 @@ import path from "path";
 import PageLayout from "@/components/page-layout";
 import { Service } from "@/app/types/service";
 import { FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 interface Props {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }> | { slug: string };
 }
 
 async function getService(slug: string): Promise<Service | null> {
@@ -30,7 +29,8 @@ export async function generateStaticParams() {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const service = await getService(params.slug);
+  const resolvedParams = await Promise.resolve(params);
+  const service = await getService(resolvedParams.slug);
 
   if (!service) {
     notFound();
@@ -42,10 +42,11 @@ export default async function ServicePage({ params }: Props) {
       imageAlt={service.title}
       heading={service.title}
     >
-      <div className="h-full overflow-y-auto">
-        <div className="grid grid-rows-[2fr_1fr_2fr] h-full gap-6">
+      <div className="lg:h-full overflow-y-auto">
+        <div className="grid lg:grid-rows-[2fr_1fr_2fr] lg:h-full gap-6">
           {/*text image*/}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid">
+            {/*<div className="grid grid-cols-2 gap-6">*/}
             <div className="border-2 border-gray-400/50 rounded-2xl p-8">
               <h1 className="text-3xl font-medium mb-4">
                 Een exclusief diner in je eigen huis
@@ -56,15 +57,15 @@ export default async function ServicePage({ params }: Props) {
                 dessert, alles wordt tot in detail verzorgd.
               </p>
             </div>
-            <div className="relative h-full">
-              <Image
-                src={service.mainImage}
-                alt={service.title}
-                fill
-                priority
-                className="object-cover rounded-2xl"
-              />
-            </div>
+            {/*<div className="relative h-full">*/}
+            {/*  <Image*/}
+            {/*    src={service.mainImage}*/}
+            {/*    alt={service.title}*/}
+            {/*    fill*/}
+            {/*    priority*/}
+            {/*    className="object-cover rounded-2xl"*/}
+            {/*  />*/}
+            {/*</div>*/}
           </div>
           {/*reviews*/}
           <div className={"gap-6 grid grid-cols-2"}>
@@ -98,28 +99,31 @@ export default async function ServicePage({ params }: Props) {
             </div>
           </div>
           {/*image text*/}
-          <div className="grid grid-cols-2 gap-6">
-            <div className="relative h-full">
-              <Image
-                src={service.mainImage}
-                alt={service.title}
-                fill
-                priority
-                className="object-cover rounded-2xl"
-              />
-            </div>
+          <div className="grid">
+            {/*<div className="grid grid-cols-2 gap-6">*/}
+            {/*<div className="relative h-full">*/}
+            {/*  <Image*/}
+            {/*    src={service.mainImage}*/}
+            {/*    alt={service.title}*/}
+            {/*    fill*/}
+            {/*    priority*/}
+            {/*    className="object-cover rounded-2xl"*/}
+            {/*  />*/}
+            {/*</div>*/}
             <div className="border-2 border-gray-400/50 rounded-2xl p-8 flex flex-col justify-between">
               <h1 className="text-3xl font-medium">
                 {service.pricing?.priceTitle}
                 <p className={"text-lg"}>{service.pricing?.priceInfo}</p>
               </h1>
-              <button
-                className={
-                  "font-medium text-xl cursor-pointer px-6 py-2 border-2 border-gray-400/50 hover:bg-white transition-all duration-300 rounded-lg hover:text-black"
-                }
-              >
-                {service.pricing?.priceCtaTtext}
-              </button>
+              <Link className={"pt-8"} href="/reserveren">
+                <button
+                  className={
+                    "font-medium text-xl cursor-pointer px-6 py-2 border-2 border-gray-400/50 hover:bg-white transition-all duration-300 rounded-lg hover:text-black"
+                  }
+                >
+                  {service.pricing?.priceCtaText}
+                </button>
+              </Link>
             </div>
           </div>
         </div>

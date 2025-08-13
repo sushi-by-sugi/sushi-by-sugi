@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { CgClose } from "react-icons/cg";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface NavbarProps {
   inline?: boolean;
@@ -12,47 +12,107 @@ interface NavbarProps {
 export default function Navbar({ inline = false }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      const original = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = original;
+      };
+    }
+  }, [isMenuOpen]);
+
   return (
     <>
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-[#181820]/50 backdrop-blur-xs z-30"
+          className="fixed inset-0 bg-[#181820]/50 backdrop-blur-sm z-30"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
 
       <div
-        className={`fixed top-0 left-0 h-full w-1/2 bg-[#181820] z-50 transform transition-transform duration-300 ease-in-out ${
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!isMenuOpen}
+        className={`fixed top-0 left-0 h-dvh w-full md:w-full lg:w-[32rem] bg-[#181820] z-50 transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-6 h-full">
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="text-white hover:text-gray-300 mb-6 flex items-center gap-1 transition-colors duration-300 cursor-pointer text-lg"
-          >
-            <CgClose />
-            Sluiten
-          </button>
-          <ul className="space-y-4 text-white h-full flex flex-col justify-center items-center text-7xl">
-            {/*<Link href="/services">Our Services</Link>*/}
-            {/*<Link href="/services/sushi-catering">Sushi Catering</Link>*/}
-            <li>
+        <div className="flex h-full flex-col">
+          <div className="p-6">
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="text-white hover:text-gray-300 flex items-center gap-2 transition-colors duration-300 cursor-pointer text-lg"
+              aria-label="Sluiten"
+            >
+              <CgClose className="h-6 w-6" />
+              Sluiten
+            </button>
+          </div>
+
+          <ul className="flex-1 overflow-y-auto px-6 pb-10 flex flex-col justify-center items-center gap-6 text-white text-4xl sm:text-5xl md:text-6xl">
+            <li className="w-full">
+              <Link
+                href="/"
+                className="block text-center hover:text-gray-300 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="/menu"
+                className="block text-center hover:text-gray-300 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Menu
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="/reserveren"
+                className="block text-center hover:text-gray-300 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Reserveren
+              </Link>
+            </li>
+            <li className="w-full">
               <Link
                 href="/services/private-dining"
-                className="hover:text-gray-300 transition-colors duration-300 block"
+                className="block text-center hover:text-gray-300 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Private dining
               </Link>
             </li>
-            <li>
+            <li className="w-full">
               <Link
-                href="/menu"
-                className="hover:text-gray-300 transition-colors duration-300 block"
+                href="/services/sushi-workshop"
+                className="block text-center hover:text-gray-300 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Menu
+                Workshops
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="/services/sushi-catering"
+                className="block text-center hover:text-gray-300 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Catering
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="/contact"
+                className="block text-center hover:text-gray-300 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
               </Link>
             </li>
           </ul>
@@ -66,6 +126,8 @@ export default function Navbar({ inline = false }: NavbarProps) {
               <button
                 onClick={() => setIsMenuOpen(true)}
                 className="cursor-pointer hover:text-gray-300 transition-colors duration-300 flex items-center gap-2"
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
               >
                 <HiOutlineBars3 className="h-8 w-8" />
                 Menu
@@ -73,12 +135,10 @@ export default function Navbar({ inline = false }: NavbarProps) {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/reserveren"
                 className="px-6 py-2 border-2 border-gray-400/50 hover:bg-white group-hover:border-transparent transition-all duration-300 rounded-lg"
               >
-                <span className="text-white hover:text-black transition-colors duration-300">
-                  Reserveren
-                </span>
+                Reserveren
               </Link>
             </li>
           </ul>

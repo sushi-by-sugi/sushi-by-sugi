@@ -4,7 +4,7 @@ export interface MenuItem {
   price: string;
   description: string;
   imageSrc: string;
-  category: "maki" | "uramaki" | "special";
+  category: MenuCategory;
 }
 
-export type MenuCategory = "maki" | "uramaki" | "special";
+export type MenuCategory = "maki" | "uramaki" | "nigiri";

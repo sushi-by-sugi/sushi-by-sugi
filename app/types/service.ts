@@ -6,7 +6,7 @@ export interface ServiceReview {
 export interface ServicePricing {
   priceTitle: string;
   priceInfo: string;
-  priceCtaTtext: string;
+  priceCtaText: string;
 }
 
 export interface ServiceDescription {

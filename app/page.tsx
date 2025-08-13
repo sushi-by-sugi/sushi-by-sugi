@@ -8,8 +8,8 @@ import ImageSection from "@/components/ImageSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex p-12 gap-6">
-      <div className="w-3/4 relative">
+    <div className="min-h-screen flex flex-wrap lg:flex-nowrap p-12 gap-6">
+      <div className="lg:w-3/4 w-full relative">
         <Image
           src="/images/home-image.png"
           alt="home-sushi-image"
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-1/4 flex flex-col gap-6">
+      <div className="lg:w-1/4 w-full flex flex-col gap-6">
         <ImageSection
           text={"Private dining"}
           src="/images/Subtract.png"
@@ -49,13 +49,13 @@ export default function Home() {
           text={"Sushi Workshops"}
           src="/images/Subtract-2.png"
           alt="Sushi Workshops"
-          link={"/services/private-dining"}
+          link={"/services/sushi-workshop"}
         />
         <ImageSection
           text={"Catering"}
           src="/images/Subtract-3.png"
-          alt="Sushi Workshops"
-          link={"/services/private-dining"}
+          alt="Sushi Catering"
+          link={"/services/sushi-catering"}
         />
       </div>
     </div>

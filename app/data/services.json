@@ -2,26 +2,27 @@
   {
     "slug": "sushi-catering",
     "title": "Sushi Catering",
-    "mainImage": "/images/services/sushi-catering-main.jpg",
+    "mainImage": "/images/sushi-3.jpg",
     "description": {
       "title": "Luxe Sushi Catering",
       "content": "Wij verzorgen luxe sushi catering voor elk evenement. Van intieme diners tot grote feesten, onze verse sushi maakt elke gelegenheid bijzonder.",
       "image": "/images/services/sushi-catering-detail.jpg"
     },
     "pricing": {
+      "priceTitle": "Van intiem diner tot groots feest",
       "price": "vanaf €35 p.p.",
-      "priceInfo": "Minimaal 10 personen",
-      "priceCtaTtext": "Offerte Aanvragen"
+      "priceInfo": "Volledig verzorgde catering met oog voor detail en smaak. Inclusief verse ingrediënten, professionele opmaak en, indien gewenst, live bereiding op locatie.",
+      "priceCtaText": "Offerte Aanvragen"
     },
     "reviews": {
-      "review_1": "De sushi was perfect voor ons bedrijfsfeest. Iedereen was onder de indruk!",
-      "review_2": "Heerlijke verse sushi en uitstekende service. Aanrader!"
+      "review_1": "“De sushi was perfect voor ons bedrijfsfeest. Iedereen was onder de indruk!”",
+      "review_2": "“Heerlijke verse sushi en uitstekende service. Aanrader!”"
     }
   },
   {
     "slug": "private-dining",
     "title": "Private Dining",
-    "mainImage": "/images/home-image.png",
+    "mainImage": "/images/sushi-2.jpg",
     "description": {
       "title": "Een exclusief diner in je eigen huis",
       "content": "Laat je gasten genieten van een verfijnde sushi-ervaring, bereid en geserveerd door een professionele chef. Van amuse tot dessert, alles wordt tot in detail verzorgd.",
@@ -31,11 +32,31 @@
       "priceTitle": "Samen aan tafel, wij doen de rest",
       "priceInfo": "Een avond zonder zorgen, met luxe sushi, persoonlijke service en sfeer tot in de puntjes geregeld.",
       "price": "vanaf €35 p.p.",
-      "priceCtaTtext": "Vraag Private Dining aan"
+      "priceCtaText": "Vraag Private Dining aan"
     },
     "reviews": {
       "review_1": "“Een complete beleving van begin tot eind. De smaken, de opmaak, de bediening, alles was perfect afgestemd. Het voelde als een luxe restaurant, maar dan in onze eigen woonkamer.”",
       "review_2": "“Onze gasten waren diep onder de indruk. Elk gerecht was een kunstwerk en de chef zorgde voor een ontspannen en bijzondere sfeer aan tafel. Dit doen we zeker nog eens.”"
+    }
+  },
+  {
+    "slug": "sushi-workshop",
+    "title": "Sushi Workshop",
+    "mainImage": "/images/sushi-1.jpg",
+    "description": {
+      "title": "Word zelf een sushi-meester",
+      "content": "Ontdek de kunst van het sushi maken in een interactieve en smaakvolle workshop. Onder begeleiding van een professionele chef leer je stap voor stap de technieken achter perfecte sushirollen. Van het bereiden van de rijst tot het rollen van maki en nigiri — en natuurlijk alles proeven.",
+      "image": "/images/home-image.png"
+    },
+    "pricing": {
+      "priceTitle": "Leer, proef en geniet",
+      "priceInfo": "Een unieke combinatie van gezellig samen koken en luxe dineren. Inclusief alle verse ingrediënten, gebruik van professionele materialen en begeleiding van een ervaren chef.",
+      "price": "vanaf €45 p.p.",
+      "priceCtaText": "Reserveer je workshop"
+    },
+    "reviews": {
+      "review_1": "“Zoveel geleerd én zoveel gelachen! De chef maakte het heel toegankelijk en gezellig, en het resultaat was verrassend professioneel.”",
+      "review_2": "“Een perfecte mix van leren, samen bezig zijn en heerlijk eten. Onze zelfgemaakte sushi smaakte fantastisch. Zeker voor herhaling vatbaar!”"
     }
   }
 ]

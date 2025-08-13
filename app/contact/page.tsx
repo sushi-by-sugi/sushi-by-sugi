@@ -14,13 +14,15 @@ const openingHours = [
 export default function ContactPage() {
   return (
     <PageLayout
-      imageSrc="/images/home-image.png"
+      imageSrc="/images/sushi-contact.png"
       imageAlt="Contact"
       heading="Contact"
     >
-      <div className="h-full overflow-y-auto">
-        <div className="grid grid-rows-2 h-full gap-6">
-          <div className={"grid grid-cols-2 gap-6"}>
+      <div className="lg:h-full overflow-y-auto">
+        <div className="grid lg:h-full gap-6">
+          {/*<div className="grid grid-rows-2 h-full gap-6">*/}
+          <div className={"grid"}>
+            {/*<div className={"grid grid-cols-2 gap-6"}>*/}
             {/*opening hours*/}
             <div
               className={
@@ -47,55 +49,56 @@ export default function ContactPage() {
               </p>
             </div>
             {/*image grid*/}
-            <div className={"grid grid-cols-2 grid-rows-2 gap-6 h-full"}>
-              <div className="relative w-full h-full">
-                <Image
-                  src="/images/home-image.png"
-                  alt="home-sushi-image"
-                  fill
-                  className="object-cover rounded-2xl"
-                  priority
-                />
-              </div>
-              <div className="relative w-full h-full">
-                <Image
-                  src="/images/home-image.png"
-                  alt="home-sushi-image"
-                  fill
-                  className="object-cover rounded-2xl"
-                  priority
-                />
-              </div>
-              <div className="relative w-full h-full">
-                <Image
-                  src="/images/home-image.png"
-                  alt="home-sushi-image"
-                  fill
-                  className="object-cover rounded-2xl"
-                  priority
-                />
-              </div>
-              <div className="relative w-full h-full">
-                <Image
-                  src="/images/home-image.png"
-                  alt="home-sushi-image"
-                  fill
-                  className="object-cover rounded-2xl"
-                  priority
-                />
-              </div>
-            </div>
+            {/*<div className={"grid grid-cols-2 grid-rows-2 gap-6 h-full"}>*/}
+            {/*  <div className="relative w-full h-full">*/}
+            {/*    <Image*/}
+            {/*      src="/images/home-image.png"*/}
+            {/*      alt="home-sushi-image"*/}
+            {/*      fill*/}
+            {/*      className="object-cover rounded-2xl"*/}
+            {/*      priority*/}
+            {/*    />*/}
+            {/*  </div>*/}
+            {/*  <div className="relative w-full h-full">*/}
+            {/*    <Image*/}
+            {/*      src="/images/home-image.png"*/}
+            {/*      alt="home-sushi-image"*/}
+            {/*      fill*/}
+            {/*      className="object-cover rounded-2xl"*/}
+            {/*      priority*/}
+            {/*    />*/}
+            {/*  </div>*/}
+            {/*  <div className="relative w-full h-full">*/}
+            {/*    <Image*/}
+            {/*      src="/images/home-image.png"*/}
+            {/*      alt="home-sushi-image"*/}
+            {/*      fill*/}
+            {/*      className="object-cover rounded-2xl"*/}
+            {/*      priority*/}
+            {/*    />*/}
+            {/*  </div>*/}
+            {/*  <div className="relative w-full h-full">*/}
+            {/*    <Image*/}
+            {/*      src="/images/home-image.png"*/}
+            {/*      alt="home-sushi-image"*/}
+            {/*      fill*/}
+            {/*      className="object-cover rounded-2xl"*/}
+            {/*      priority*/}
+            {/*    />*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
-          <div className="grid grid-cols-2 gap-6">
-            <div className="relative h-full">
-              <Image
-                src="/images/home-image.png"
-                alt="home-sushi-image"
-                fill
-                className="object-cover rounded-2xl"
-                priority
-              />
-            </div>
+          <div className="grid">
+            {/*<div className="grid grid-cols-2 gap-6">*/}
+            {/*<div className="relative h-full">*/}
+            {/*  <Image*/}
+            {/*    src="/images/home-image.png"*/}
+            {/*    alt="home-sushi-image"*/}
+            {/*    fill*/}
+            {/*    className="object-cover rounded-2xl"*/}
+            {/*    priority*/}
+            {/*  />*/}
+            {/*</div>*/}
             <div className="border-2 border-gray-400/50 rounded-2xl p-8">
               <h1 className="text-3xl font-medium mb-4">Contact</h1>
               <ul className={"text-lg"}>
