@@ -136,7 +136,7 @@ export default function Navbar({ inline = false }: NavbarProps) {
             <li>
               <Link
                 href="/reserveren"
-                className="px-6 py-2 border-2 border-gray-400/50 hover:bg-white group-hover:border-transparent transition-all duration-300 rounded-lg"
+                className="px-6 py-2 border-2 border-gray-400/50 hover:bg-white hover:text-gray-600 group-hover:border-transparent transition-all duration-300 rounded-lg"
               >
                 Reserveren
               </Link>

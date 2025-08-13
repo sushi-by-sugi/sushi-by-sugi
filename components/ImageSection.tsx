@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaTiktok } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 
 interface ImageSectionProps {

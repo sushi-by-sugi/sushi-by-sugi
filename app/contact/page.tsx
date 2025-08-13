@@ -1,6 +1,4 @@
 import PageLayout from "@/components/page-layout";
-import Image from "next/image";
-
 const openingHours = [
   { day: "Maandag", hours: "16:00-23:00" },
   { day: "Dinsdag", hours: "16:00-23:00" },

@@ -1,8 +1,6 @@
 import type React from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/navbar";
-import Logo from "@/components/Navbar/logo";
-
 interface PageLayoutProps {
   imageSrc: string;
   imageAlt: string;

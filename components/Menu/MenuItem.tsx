@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface MenuItemProps {
   title: string;
   price: string;
@@ -11,7 +9,6 @@ export default function MenuItem({
   title,
   price,
   description,
-  imageSrc,
 }: MenuItemProps) {
   return (
     // <li className="grid grid-cols-[200px_1fr] gap-6 items-center">

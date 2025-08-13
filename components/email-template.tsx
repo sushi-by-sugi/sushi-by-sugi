@@ -5,7 +5,6 @@ import {
   Container,
   Text,
   Section,
-  Img,
 } from "@react-email/components";
 
 interface ReservationEmailProps {

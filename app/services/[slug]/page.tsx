@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import PageLayout from "@/components/page-layout";
@@ -8,7 +7,9 @@ import { FaStar } from "react-icons/fa";
 import Link from "next/link";
 
 interface Props {
-  params: Promise<{ slug: string }> | { slug: string };
+  params: Promise<{
+    slug: string;
+  }>;
 }
 
 async function getService(slug: string): Promise<Service | null> {
