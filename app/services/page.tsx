@@ -27,6 +27,8 @@ export default async function ServicesPage() {
               src={service.mainImage}
               alt={service.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              loading="lazy"
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/40 flex items-end p-6">

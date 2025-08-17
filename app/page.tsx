@@ -8,22 +8,22 @@ import ImageSection from "@/components/ImageSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-wrap lg:flex-nowrap p-12 gap-6">
-      <div className="lg:w-3/4 w-full relative">
+    <div className="min-h-[100svh] flex flex-col lg:flex-row gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:px-12 lg:py-12">
+      <div className="lg:w-3/4 w-full relative overflow-hidden rounded-2xl min-h-[55svh] sm:min-h-[65svh]">
         <Image
           src="/images/home-image.png"
           alt="home-sushi-image"
           fill
-          className="object-cover rounded-2xl"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
         <Navbar />
         <Logo />
 
         <div className="absolute bottom-6 left-6 z-10">
-          <ul className={"flex gap-4"}>
+          <ul className="flex gap-4">
             <li className="border-2 border-gray-400/50 rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-white hover:border-transparent transition-all duration-300 group">
               <Link href="/">
                 <FaInstagram className="h-5 w-5 text-white group-hover:text-black transition-colors duration-300" />

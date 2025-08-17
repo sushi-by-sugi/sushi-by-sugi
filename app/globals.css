@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+html, body {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100svh;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --background: #181820;
   --foreground: #171717;
