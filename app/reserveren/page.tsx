@@ -141,11 +141,11 @@ export default function ReserverenPage() {
                   id="date"
                   name="date"
                   required
-                  className="peer w-full p-3 rounded-lg bg-transparent border border-gray-400/50 text-white outline-none appearance-none focus:ring-0 focus:outline-none hover:outline-none active:outline-none"
+                  className="peer w-full px-3 py-3 rounded-lg bg-transparent border border-gray-400/50 text-white outline-none appearance-none focus:ring-0 focus:outline-none hover:outline-none active:outline-none placeholder:text-gray-400/80"
                 />
                 <span
-                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400/80 transition-opacity duration-150
-                 opacity-100 peer-focus:opacity-0 peer-valid:opacity-0 md:hidden"
+                  className="pointer-events-none absolute inset-y-0 left-3 right-3 md:hidden flex items-center text-gray-400/80 transition-opacity duration-150
+               opacity-100 peer-focus:opacity-0 peer-valid:opacity-0"
                   aria-hidden="true"
                 >
                   Gewenste datum
