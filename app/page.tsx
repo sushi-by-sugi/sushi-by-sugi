@@ -38,7 +38,80 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="lg:w-1/4 w-full flex flex-col gap-6">
+      {/* Mobile-only: stacked cards with overlay text */}
+      <div className="lg:hidden w-full flex flex-col gap-4">
+        <Link
+          href="/services/private-dining"
+          aria-label="Private dining"
+          className="block"
+        >
+          <div className="relative w-full h-40 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/Subtract.png"
+              alt="Private dining"
+              fill
+              sizes="100vw"
+              loading="lazy"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 flex items-end p-3">
+              <h3 className="text-white text-xl font-medium drop-shadow-md">
+                Private dining
+              </h3>
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          href="/services/sushi-workshop"
+          aria-label="Sushi Workshops"
+          className="block"
+        >
+          <div className="relative w-full h-40 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/Subtract-2.png"
+              alt="Sushi Workshops"
+              fill
+              sizes="100vw"
+              loading="lazy"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 flex items-end p-3">
+              <h3 className="text-white text-xl font-medium drop-shadow-md">
+                Sushi Workshops
+              </h3>
+            </div>
+          </div>
+        </Link>
+
+        <Link
+          href="/services/sushi-catering"
+          aria-label="Sushi Catering"
+          className="block"
+        >
+          <div className="relative w-full h-40 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/Subtract-3.png"
+              alt="Sushi Catering"
+              fill
+              sizes="100vw"
+              loading="lazy"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 flex items-end p-3">
+              <h3 className="text-white text-xl font-medium drop-shadow-md">
+                Catering
+              </h3>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      {/* Tablet/Desktop image sections */}
+      <div className="hidden lg:flex lg:w-1/4 w-full flex-col gap-6">
         <ImageSection
           text={"Private dining"}
           src="/images/Subtract.png"

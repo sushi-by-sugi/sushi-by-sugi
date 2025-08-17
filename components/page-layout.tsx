@@ -15,7 +15,7 @@ export default function PageLayout({
   children,
 }: PageLayoutProps) {
   return (
-    <div className="h-screen w-screen p-6 md:p-10 lg:p-12 overflow-x-hidden">
+    <div className="lg:h-screen w-screen p-6 md:p-10 lg:p-12 overflow-x-hidden">
       <div className="h-full min-h-0 flex flex-col gap-6 lg:flex-row">
         <div className="relative w-full lg:w-1/2 h-[48vh] sm:h-[56vh] md:h-[60vh] lg:h-full">
           <Navbar inline={true} />
