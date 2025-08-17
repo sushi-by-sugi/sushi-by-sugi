@@ -135,13 +135,22 @@ export default function ReserverenPage() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <input
-                type="date"
-                id="date"
-                name="date"
-                className="p-3 rounded-lg bg-transparent border border-gray-400/50 text-white outline-none appearance-none focus:ring-0 focus:outline-none hover:outline-none active:outline-none"
-                placeholder="Gewenste datum"
-              />
+              <div className="relative">
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  required
+                  className="peer w-full p-3 rounded-lg bg-transparent border border-gray-400/50 text-white outline-none appearance-none focus:ring-0 focus:outline-none hover:outline-none active:outline-none"
+                />
+                <span
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400/80 transition-opacity duration-150
+                 opacity-100 peer-focus:opacity-0 peer-valid:opacity-0 md:hidden"
+                  aria-hidden="true"
+                >
+                  Gewenste datum
+                </span>
+              </div>
             </div>
 
             <div className="flex flex-col gap-2">

@@ -38,7 +38,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile-only: stacked cards with overlay text */}
       <div className="lg:hidden w-full flex flex-col gap-4">
         <Link
           href="/services/private-dining"
@@ -110,7 +109,6 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Tablet/Desktop image sections */}
       <div className="hidden lg:flex lg:w-1/4 w-full flex-col gap-6">
         <ImageSection
           text={"Private dining"}
