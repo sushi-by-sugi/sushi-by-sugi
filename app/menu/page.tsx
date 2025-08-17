@@ -16,8 +16,8 @@ export default function MenuPage() {
       imageAlt="Sushi menu image"
       heading="Menu"
     >
-      <div className="lg:overflow-auto [scrollbar-gutter:stable] lg:h-full flex justify-center p-20 border-2 border-gray-400/50 rounded-2xl">
-        <div className="flex items-center flex-col gap-12">
+      <div className="lg:overflow-auto [scrollbar-gutter:stable] lg:h-full flex justify-center p-12 lg:p-20 border-2 border-gray-400/50 rounded-2xl">
+        <div className="flex items-center flex-col gap-12 w-full">
           <div className="flex gap-4 text-xl">
             {categories.map((category) => {
               const isActive = selectedCategory === category;
@@ -26,7 +26,7 @@ export default function MenuPage() {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   whileTap={{ scale: 0.98 }}
-                  className={`relative overflow-hidden px-6 py-2 border-2 border-gray-400/50 transition-colors duration-300 rounded-lg cursor-pointer ${
+                  className={`relative overflow-hidden px-2 md:px-6 py-2 border-2 border-gray-400/50 transition-colors duration-300 rounded-lg cursor-pointer ${
                     isActive ? "text-black" : "hover:bg-white hover:text-black"
                   }`}
                 >
