@@ -42,7 +42,7 @@ export async function POST(req: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const { data, error } = await resend.emails.send({
-      from: "Test <onboarding@resend.dev>",
+      from: "Sushi By Sugi <contact@sushibysugi.nl>",
       to: ["fortb2302@gmail.com"],
       subject: "Reservering aangevraagd",
       react: EmailTemplate({
