@@ -7,7 +7,7 @@ type SendEmailDto = {
   recipients: Mail.Address[];
   subject: string;
   message: string;
-  html: any;
+  html: Mail.Options["html"];
 };
 
 const transporter = nodemailer.createTransport({
