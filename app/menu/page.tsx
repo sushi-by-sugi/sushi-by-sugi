@@ -52,7 +52,7 @@ export default function MenuPage() {
           </div>
 
           <div className="flex flex-col gap-12">
-            <h1 className="text-3xl text-center">
+            <h1 className="text-4xl text-center">
               {selectedCategory.charAt(0).toUpperCase() +
                 selectedCategory.slice(1)}
             </h1>

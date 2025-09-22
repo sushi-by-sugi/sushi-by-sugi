@@ -36,8 +36,12 @@ img, svg, video, canvas {
 body {
   background: var(--background);
   color: #ffffff;
-  font-family: Cormorant Garamond, sans-serif;
+  font-family: var(--font-dm-sans);
   overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant-garamond);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

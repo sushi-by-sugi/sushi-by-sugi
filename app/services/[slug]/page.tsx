@@ -49,10 +49,10 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid">
             {/*<div className="grid grid-cols-2 gap-6">*/}
             <div className="border-2 border-gray-400/50 rounded-2xl p-8">
-              <h1 className="text-3xl font-medium mb-4">
+              <h1 className="text-4xl font-medium mb-4">
                 Een exclusief diner in je eigen huis
               </h1>
-              <p className={"text-lg"}>
+              <p>
                 Laat je gasten genieten van een verfijnde sushi-ervaring, bereid
                 en geserveerd door een professionele chef. Van amuse tot
                 dessert, alles wordt tot in detail verzorgd.
@@ -112,10 +112,12 @@ export default async function ServicePage({ params }: Props) {
             {/*  />*/}
             {/*</div>*/}
             <div className="border-2 border-gray-400/50 rounded-2xl p-8 flex flex-col justify-between">
-              <h1 className="text-3xl font-medium">
-                {service.pricing?.priceTitle}
-                <p className={"text-lg"}>{service.pricing?.priceInfo}</p>
-              </h1>
+              <div>
+                <h1 className="text-4xl font-medium mb-4">
+                  {service.pricing?.priceTitle}
+                </h1>
+                <p>{service.pricing?.priceInfo}</p>
+              </div>
               <Link className={"pt-8"} href="/reserveren">
                 <button
                   className={

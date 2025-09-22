@@ -27,7 +27,7 @@ export default function ReserverenPage() {
     };
 
     try {
-      const res = await fetch("/api/send", {
+      const res = await fetch("/api/sendContactEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -166,7 +166,7 @@ export default function ReserverenPage() {
             <button
               type="submit"
               disabled={submitting}
-              className="p-3 rounded-lg bg-white text-black font-medium disabled:opacity-60 cursor-pointer"
+              className="p-3 rounded-lg bg-white text-black hover:bg-black hover:text-white duration-200 font-medium disabled:opacity-60 cursor-pointer"
             >
               {submitting ? "Verzenden..." : "Reserveren"}
             </button>

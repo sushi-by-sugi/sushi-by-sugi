@@ -27,7 +27,7 @@ export default function ContactPage() {
                 "border-2 border-gray-400/50 rounded-2xl p-8 flex flex-col justify-between"
               }
             >
-              <h1 className={"text-center text-3xl"}>Openingstijden</h1>
+              <h1 className={"text-center text-4xl"}>Openingstijden</h1>
               <ul>
                 {openingHours.map(({ day, hours }) => (
                   <li
@@ -98,7 +98,7 @@ export default function ContactPage() {
             {/*  />*/}
             {/*</div>*/}
             <div className="border-2 border-gray-400/50 rounded-2xl p-8">
-              <h1 className="text-3xl font-medium mb-4">Contact</h1>
+              <h1 className="text-4xl font-medium mb-4">Contact</h1>
               <ul className={"text-lg"}>
                 <li className={"flex justify-between"}>
                   <p>Adres</p>
