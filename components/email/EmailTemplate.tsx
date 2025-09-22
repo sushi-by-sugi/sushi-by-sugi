@@ -45,8 +45,7 @@ export default function EmailTemplate({
       </header>
       <section style={styles.content}>
         <p style={styles.intro}>
-          U hebt een nieuw bericht ontvangen via het reserveringsformulier op de
-          website.
+          U hebt een nieuw bericht ontvangen via het reserveringsformulier.
         </p>
         <div style={styles.detail}>
           <h2 style={styles.subheading}>Gegevens Afzender:</h2>
