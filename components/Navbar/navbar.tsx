@@ -119,7 +119,7 @@ export default function Navbar({ inline = false }: NavbarProps) {
         </div>
       </div>
 
-      <nav className="absolute top-6 sm:left-8 md:left-6 md:right-6 z-40 flex justify-between items-center">
+      <nav className="absolute top-6 left-1/2 -translate-x-1/2 z-40 flex items-center justify-center w-max sm:left-8 sm:translate-x-0 sm:w-auto sm:justify-between md:left-6 md:right-6">
         <div className="bg-[#181820] p-6 text-2xl rounded-lg font-medium">
           <ul className="flex space-x-6 text-white">
             <li>

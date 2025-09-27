@@ -31,7 +31,7 @@ export default async function ServicesPage() {
               loading="lazy"
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black/40 flex items-end p-6">
+            <div className="absolute inset-0 bg-black/50 flex items-end p-6">
               <h2 className="text-white text-3xl font-medium">
                 {service.title}
               </h2>

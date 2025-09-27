@@ -1,4 +1,5 @@
 import PageLayout from "@/components/page-layout";
+import { FaEnvelope, FaLocationArrow, FaPhone, FaStar } from "react-icons/fa";
 const openingHours = [
   { day: "Maandag", hours: "16:00-23:00" },
   { day: "Dinsdag", hours: "16:00-23:00" },
@@ -24,7 +25,7 @@ export default function ContactPage() {
             {/*opening hours*/}
             <div
               className={
-                "border-2 border-gray-400/50 rounded-2xl p-8 flex flex-col justify-between"
+                "border-2 border-gray-400/50 rounded-2xl p-8 flex flex-col justify-between gap-6"
               }
             >
               <h1 className={"text-center text-4xl"}>Openingstijden</h1>
@@ -100,26 +101,23 @@ export default function ContactPage() {
             <div className="border-2 border-gray-400/50 rounded-2xl p-8">
               <h1 className="text-4xl font-medium mb-4">Contact</h1>
               <ul className={"text-lg"}>
-                <li className={"flex justify-between"}>
-                  <p>Adres</p>
-                  <div className={"text-right"}>
-                    <p>De Nieuwe Erven</p>
-                    <p>35431 NV Cuijk</p>
-                  </div>
+                <li className={"grid grid-cols-[auto_1fr] items-center gap-4"}>
+                  <FaLocationArrow />
+                  <p>De Nieuwe Erven 35431 NV Cuijk</p>
                 </li>
-                <li className={"flex justify-between"}>
-                  <p>Telefoonnummer</p>
+                <li className={"grid grid-cols-[auto_1fr] items-center gap-4"}>
+                  <FaPhone />
                   <a
-                    className={"hover:opacity-50 transition"}
+                    className={"hover:opacity-50 transition underline"}
                     href={"tel:+31612345678"}
                   >
                     +31 6 12 34 56 78
                   </a>
                 </li>
-                <li className={"flex justify-between"}>
-                  <p>E-mailadres</p>
+                <li className={"grid grid-cols-[auto_1fr] items-center gap-4"}>
+                  <FaEnvelope />
                   <a
-                    className={"hover:opacity-50 transition"}
+                    className={"hover:opacity-50 transition underline"}
                     href={"mailto:info@sushibysugi.nl"}
                   >
                     info@sushibysugi.nl

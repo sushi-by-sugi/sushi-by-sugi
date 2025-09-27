@@ -26,7 +26,7 @@ export default function PageLayout({
             className="object-cover rounded-2xl"
             priority
           />
-          <div className="absolute inset-0 bg-black/20 rounded-2xl" />
+          <div className="absolute inset-0 bg-black/50 rounded-2xl" />
 
           <div className="absolute bottom-6 left-6 z-10">
             <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium max-w-md leading-tight">
